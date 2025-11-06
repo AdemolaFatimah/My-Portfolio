@@ -1,0 +1,347 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  height: 100vh;
+  width: 100%;
+  background-color: #2e3c55;
+}
+a {
+  text-decoration: none;
+}
+/* Header styling */
+.nav-bar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background-color: #2e3c55;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 9%;
+  z-index: 1000;
+  border-bottom: 2px solid #475c80;
+}
+.nav-bar a {
+  color: white;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li:hover a {
+  color: #7cf03d;
+}
+.nav-bar ul li:active a {
+  color: #7cf03d;
+}
+.nav-bar ul li {
+  list-style: none;
+  margin-left: 35px;
+}
+.nav-bar #logo {
+  font-size: 30px;
+  font-weight: 800;
+}
+.nav-bar #logo span {
+  color: #7cf03d;
+}
+/* Hero-section styling */
+.hero-section {
+  text-align: center;
+  color: white;
+  padding-top: 200px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 40px;
+}
+.hero-section h1 {
+  font-size: 50px;
+  font-weight: 800;
+  padding-bottom: 30px;
+}
+.hero-section h1 span {
+  color: #7cf03d;
+}
+.hero-section h2 {
+  display: inline-block;
+  font-size: 30px;
+}
+.hero-section h2 span {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  -webkit-text-stroke: 0.7px #7cf03d;
+  animation: display-text 16s linear infinite;
+  animation-delay: calc(-4s * var(--i));
+}
+@keyframes display-text {
+  25%,
+  100% {
+    display: none;
+  }
+}
+.hero-section h2 span ::before {
+  content: attr(data-text);
+  position: absolute;
+  width: 0;
+  border-right: 2px solid #7cf03d;
+  color: #7cf03d;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 4s linear infinite;
+}
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.hero-section p {
+  max-width: 650px;
+  margin-left: 370px;
+  font-size: 17px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 30px;
+  letter-spacing: 0.2rem;
+  background-color: #7cf03d;
+  border: 2px solid #7cf03d;
+  border-radius: 40px;
+  box-shadow: 0 0 10px #7cf03d;
+  margin-top: 20px;
+  font-size: 18px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: 0.5s;
+}
+.btn:hover {
+  background: transparent;
+  color: #7cf03d;
+  box-shadow: none;
+  transform: translateY(-3px);
+}
+/* About styling */
+#about {
+  text-align: center;
+  font-family: "Open Sans", sans-serif;
+  color: white;
+  padding: 40px;
+}
+.about-description {
+  font-size: 50px;
+  font-weight: 800;
+  color: #7cf03d;
+  padding-top: 130px;
+  padding-bottom: 40px;
+}
+.about-text {
+  max-width: 1200px;
+  padding-left: 100px;
+  line-height: 50px;
+  font-size: 20px;
+  font-weight: 400;
+  color: #d1f3bf;
+}
+/* Project styling */
+#projects {
+  font-family: "Open Sans", sans-serif;
+}
+#projects h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #7cf03d;
+  text-align: center;
+  padding-top: 130px;
+  padding-bottom: 70px;
+}
+.project-container {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  gap: 2rem;
+  margin: auto;
+}
+
+.project-card {
+  background: transparent;
+  border: 2px solid #7cf03d;
+  color: #d1f3bf;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  line-height: 30px;
+  max-width: 450px;
+}
+.project-card h3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #98e072;
+}
+
+.project-card:hover {
+  transform: translateY(-15px);
+}
+
+.project-card .links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 10px 30px;
+  background-color: #d1f3bf;
+  border: 2px solid #d1f3bf;
+  border-radius: 40px;
+  box-shadow: 0 0 5px #d1f3bf;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: 0.5s;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-left: 70px;
+}
+/* Experience styling */
+#experience {
+  font-family: "Open Sans", sans-serif;
+}
+#experience h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #7cf03d;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 70px;
+}
+.experience-card {
+  background: transparent;
+  border: 2px solid #7cf03d;
+  color: #d1f3bf;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  line-height: 30px;
+  max-width: 450px;
+  margin-left: 450px;
+}
+.experience-card:hover {
+  transform: translateY(-15px);
+}
+.experience-card h3 {
+  font-size: 20px;
+  padding-bottom: 20px;
+  color: #98e072;
+}
+.experience-card-list ul li {
+  padding-left: 20px;
+  padding-top: 20px;
+}
+/* Skills styling */
+#skills {
+  font-family: "Open Sans", sans-serif;
+}
+#skills h2 {
+  font-size: 50px;
+  font-weight: 800;
+  color: #7cf03d;
+  text-align: center;
+  padding-top: 140px;
+  padding-bottom: 70px;
+}
+.skill-card-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.skill-card {
+  background: transparent;
+  border: 2px solid #7cf03d;
+  color: #d1f3bf;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  line-height: 30px;
+  max-width: 450px;
+}
+.skill-card:hover {
+  transform: translateY(-15px);
+}
+/* Contact Styling */
+.contact {
+  padding: 80px 10%;
+  text-align: center;
+  background: #2e3c55; 
+  color: #98e072; 
+  animation: fadeIn 1s ease-in;
+  margin-top: 100px;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  color: #98e072;
+}
+
+.contact h2 span {
+  color: #fff; 
+}
+
+.contact p {
+  font-size: 1.1rem;
+  color: #d1f3bf; 
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-link {
+  display: inline-block;
+  background: transparent;
+  border: 2px solid #98e072;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: #98e072;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.contact-link:hover {
+  background: #98e072;
+  color: #2e3c55;
+  transform: translateY(-3px);
+}
+
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
