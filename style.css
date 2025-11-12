@@ -66,7 +66,7 @@ a {
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  z-index: 1100;
+  /* z-index: 1100; */
 }
 
 .hamburger span {
@@ -250,8 +250,45 @@ a {
   letter-spacing: 0.1rem;
   margin-left: 70px;
 }
-.project-card img{
+.project-card img {
   object-fit: contain;
+}
+.project-container1 {
+  display: flex;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 40px;
+  gap: 2rem;
+  margin: auto;
+}
+
+.project-card1 {
+  background: transparent;
+  border: 2px solid #7cf03d;
+  color: #d1f3bf;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+  line-height: 30px;
+  max-width: 415px;
+}
+.project-card1 .links a {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 10px 30px;
+  background-color: #d1f3bf;
+  border: 2px solid #d1f3bf;
+  border-radius: 40px;
+  box-shadow: 0 0 5px #d1f3bf;
+  margin-top: 20px;
+  font-size: 16px;
+  color: #1f242d;
+  font-weight: 600;
+  transition: 0.5s;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-left: 70px;
 }
 /* Experience styling */
 #experience {
@@ -401,9 +438,9 @@ footer {
     display: flex;
     justify-content: space-between;
   }
-  /* .nav-bar ul li {
+  .nav-bar ul li {
     display: none;
-  } */
+  }
   .hamburger {
     display: flex;
   }
@@ -417,7 +454,7 @@ footer {
     width: 100%;
     text-align: center;
     display: none;
-    z-index: 1500;
+    /* z-index: 1500; */
   }
 
   .nav-menu.active {
@@ -471,6 +508,12 @@ footer {
     display: flex;
     flex-direction: column;
   }
+  .project-card img {
+    height: 160px;
+  }
+  .project-card1 img {
+    height: 160px;
+  }
   /* Experience styling */
   #experience h2 {
     padding-top: 110px;
@@ -493,5 +536,12 @@ footer {
   /* contact styling */
   .contact {
     margin-top: 50px;
+  }
+  /* Footer styling */
+  footer {
+    font-size: 8px;
+    padding: 0.5rem;
+    letter-spacing: 3px;
+    height: 110px;
   }
 }
